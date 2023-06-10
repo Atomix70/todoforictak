@@ -1,0 +1,43 @@
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  background-color: white;
+  position: relative;
+  width: 50%;
+  margin-left: 20px;
+}
+.custom-input input {
+  padding: 16px;
+  border-color: lightgrey;
+}
+.custom-input p{
+    background-color: white;
+    position: relative;
+    margin-top: -23px;
+    margin-left: 5px;
+    padding: 0 10px;
+    font-size: 11px;
+    width: fit-content;
+    top: 18px;
+}
+.flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media only screen and (max-width:768px){
+    .flex-wrapper {
+        flex-direction: column;
+    }
+    .custom-input {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .priority{
+        width: 100%;
+    }
+
+}
+

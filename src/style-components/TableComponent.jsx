@@ -19,6 +19,8 @@ const TableComponent = (props) => {
           <TableRow>
             <TableCell>Task</TableCell>
             <TableCell align="right">Description</TableCell>
+            <TableCell align="right">Priority</TableCell>
+            <TableCell align="right">Date</TableCell>
             <TableCell align="right"></TableCell>
           </TableRow>
         </TableHead>
@@ -31,8 +33,12 @@ const TableComponent = (props) => {
               <TableCell component="th" scope="row">
                 {row.task}
               </TableCell>
-              <TableCell align="right">{row.description}</TableCell>
-              <TableCell align="right"><Button variant='outlined' onClick={()=>{props.sendFromTable(index)}}>Mark as Done</Button></TableCell>
+              <TableCell align="right">{row.description.slice(0,40)}</TableCell>
+              <TableCell align="right">{row.priority}</TableCell>
+              <TableCell align="right">{row.date}</TableCell>
+              { props.type=="upcoming"?
+              <TableCell align="right"><Button variant='outlined' onClick={()=>{props.sendFromTable(index)}}>Mark as Done</Button></TableCell>:
+              ""}
             </TableRow>
           ))}
         </TableBody>
